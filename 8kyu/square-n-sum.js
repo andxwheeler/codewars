@@ -13,3 +13,11 @@ function squareSum(numbers) {
   })
   return sum
 }
+
+// A better method would be to use .reduce
+
+function squareSum(numbers){
+  return numbers.reduce(function(sum, n){
+    return (n*n) + sum;
+  }, 0)
+}
